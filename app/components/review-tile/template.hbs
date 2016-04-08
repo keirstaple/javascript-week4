@@ -3,6 +3,6 @@
   <p>{{review.text}}</p>
   <button {{action 'voteUp' review.id}}>Vote Up</button>
   <button {{action 'voteDown' review.id}}>Vote Down</button><br><br>
-  Vote Count: {{review.voteCount}}
+  Vote Count: {{review.voteCount}} {{helpful-review review}}
   <hr>
 </div>
