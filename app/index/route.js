@@ -6,7 +6,7 @@ export default Ember.Route.extend({
       restaurant: this.store.findAll('restaurant'),
       review: this.store.findAll('review'),
       rating: this.store.findAll('rating')
-    })
+    });
   },
 
   actions: {

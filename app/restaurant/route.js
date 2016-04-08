@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       });
       Ember.RSVP.all(review_deletions).then(function(){
         return restaurant.destroyRecord();
-      })
+      });
       this.transitionTo('index');
     },
 
