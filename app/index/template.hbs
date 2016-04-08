@@ -1,10 +1,12 @@
 <div class="container">
-  <h5>Add Your Restaurant</h5>
+  <br>
   {{new-restaurant save="save"}}
   <div class="restaurantFeed">
+    {{display-favorites}}
     <ul>
       {{#each model.restaurant as |restaurant|}}
         {{restaurant-tile restaurant=restaurant destroyRestaurant="destroyRestaurant"}}
+        <button {{action 'addToFavorites' restaurant}}>Favorite</button>
       {{/each}}
     </ul>
   </div>

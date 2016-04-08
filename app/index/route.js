@@ -5,11 +5,16 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       restaurant: this.store.findAll('restaurant'),
       review: this.store.findAll('review')
-      // rating: this.store.findAll('rating')
     })
   },
 
+  favorites: Ember.inject.service('favorite-list'),
+
   actions: {
+    addToFavorites(restaurant) {
+      this.get('favorites').add(restaurant)
+    },
+
     save(params) {
       var newRestaurant = this.store.createRecord('restaurant', params);
       newRestaurant.save();

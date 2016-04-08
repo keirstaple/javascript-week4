@@ -3,11 +3,11 @@
   <h4>{{restaurant.location}}</h4>
   <h4>{{restaurant.cuisine}}</h4>
   <img src="{{restaurant.image}}" alt="{{restaurant.name}}" />
+
+  {{new-review saveReview="saveReview" restaurant=model}}
+
+  <h3>Reviews:</h3>
+  {{#each sortedReviews as |review|}}
+    {{review-tile review=review voteUp="voteUp" voteDown="voteDown"}}
+  {{/each}}
 </div>
-
-{{new-review saveReview="saveReview" restaurant=model}}
-
-<h3>Reviews:</h3>
-{{#each sortedReviews as |review|}}
-  {{review-tile review=review voteUp="voteUp" voteDown="voteDown"}}
-{{/each}}
