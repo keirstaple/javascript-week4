@@ -1,1 +1,30 @@
-{{yield}}
+{{#if addNewRestaurant}}
+  <h3>New Restaurant</h3>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Restaurant Name:</label>
+        {{input value=name id="name"}}
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location:</label>
+        {{input value=location id="location"}}
+      </div>
+
+      <div class="form-group">
+        <label for="cuisine">Restaurant Cuisine:</label>
+        {{input value=cuisine id="cuisine"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL:</label>
+        {{input value=image id="image"}}
+      </div>
+
+      <button {{action 'save'}}>Save Restaurant</button>
+    </form>
+  </div>
+  {{else}}
+    <button {{action 'restaurantFormShow'}}>Add Your Restaurant</button>
+{{/if}}
