@@ -1,9 +1,1 @@
-{{restaurant-detail restaurant=model destroyRestaurant="destroyRestaurant"}}
-
-
-{{new-review saveReview="saveReview" restaurant=model}}
-
-<h3>Reviews:</h3>
-{{#each model.reviews as |review|}}
-  {{review-tile review=review voteUp="voteUp" voteDown="voteDown"}}
-{{/each}}
+{{restaurant-detail restaurant=model destroyRestaurant="destroyRestaurant" voteUp="voteUp" voteDown="voteDown"}}
