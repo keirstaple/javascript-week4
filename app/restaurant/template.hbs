@@ -1,1 +1,9 @@
-{{outlet}}
+{{restaurant-detail restaurant=model destroyRestaurant="destroyRestaurant"}}
+
+
+<h3>Reviews:</h3>
+{{new-review saveReview="saveReview" restaurant=model}}
+
+{{#each model.reviews as |review|}}
+  {{review-tile review=review}}
+{{/each}}
