@@ -4,6 +4,7 @@ export default DS.Model.extend({
   name: DS.attr(),
   location: DS.attr(),
   cuisine: DS.attr(),
+  image: DS.attr(),
   reviews: DS.hasMany('review', {async: true}),
   ratings: DS.hasMany('rating', {async: true})
 });
