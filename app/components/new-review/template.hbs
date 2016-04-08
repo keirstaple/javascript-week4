@@ -1,1 +1,18 @@
-{{yield}}
+{{#if addNewReview}}
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        {{input value=fullName id="fullName"}}
+      </div>
+
+      <div class="form-group">
+        <label for="text">Write Review:</label>
+        {{input value=text id="text"}}
+      </div>
+      <button {{action 'saveReview'}}>Submit</button>
+    </form>
+  </div>
+  {{else}}
+    <button {{action 'reviewFormShow'}}>Write Review</button>
+{{/if}}
