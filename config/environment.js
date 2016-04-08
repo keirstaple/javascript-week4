@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'js-week4',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://restaurant-review-ks.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
