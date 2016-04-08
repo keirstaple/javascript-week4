@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         name: this.get('name'),
         location: this.get('location'),
         cuisine: this.get('cuisine'),
-        image: this.get('cuisine')
+        image: this.get('image')
       };
       this.set('addNewRestaurant', false);
       this.sendAction('save', params);
