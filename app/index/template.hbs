@@ -1,1 +1,11 @@
-
+<div class="container">
+  <h5>Add Your Restaurant</h5>
+  {{new-restaurant save="save"}}
+  <div class="restaurantFeed">
+    <ul>
+      {{#each model.restaurant as |restaurant|}}
+        {{restaurant-tile restaurant=restaurant destroyRestaurant="destroyRestaurant"}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
