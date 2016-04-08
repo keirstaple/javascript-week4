@@ -5,5 +5,5 @@
 
 <h3>Reviews:</h3>
 {{#each model.reviews as |review|}}
-  {{review-tile review=review}}
+  {{review-tile review=review voteUp="voteUp" voteDown="voteDown"}}
 {{/each}}

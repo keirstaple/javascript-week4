@@ -24,6 +24,22 @@ export default Ember.Route.extend({
         return restaurant.save();
       });
       this.transitionTo('restaurant', params.restaurant);
+    },
+
+    voteUp(vote) {
+      this.store.findRecord('review', vote).then(function(review){
+        review.incrementProperty('voteCount');
+        review.save();
+      });
+      this.transitionTo('restaurant');
+    },
+
+    voteDown(vote) {
+      this.store.findRecord('review', vote).then(function(review) {
+        review.decrementProperty('voteCount');
+        review.save();
+      });
+      this.transitionTo('restaurant');
     }
   }
 });

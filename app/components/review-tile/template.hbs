@@ -1,5 +1,8 @@
 <div class="review">
   <p><strong>{{review.fullName}}</strong> wrote a review on {{review.date}}</p>
   <p>{{review.text}}</p>
+  <button {{action 'voteUp' review.id}}>Vote Up</button>
+  <button {{action 'voteDown' review.id}}>Vote Down</button><br><br>
+  Vote Count: {{review.voteCount}}
   <hr>
 </div>
