@@ -1,7 +1,15 @@
-# Js-week4
+# JS-Week4
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember application lets users add restaurants and and add reviews to each reastaurant. They can then up-vote and down-vote reviews based on their helpfulness, as well as add restaurants to their favorites.
+
+Code Objectives: 
+* The project contains at least one functioning computed property.
+* A service has been implemented successfully.
+* At least one custom helper is being used to format data.
+* Previous Epicodus standards have been met.
+* The application works as expected.
+* Able to discuss the flow of the code and the concepts behind it with an instructor using correct terminology.
+
 
 ## Prerequisites
 
@@ -42,6 +50,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 Specify what it takes to deploy your app.
+
+###Known Bugs
+When the user up-votes a review and the review reaches more than 10 votes (the number required to display the green 'Helpful' text signifying that the review is useful to others), the user must first revert to the homepage and then click the restaurant again before the Helpful text shows.
 
 ## Further Reading / Useful Links
 
