@@ -42,7 +42,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/javascript-week4/dist';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
