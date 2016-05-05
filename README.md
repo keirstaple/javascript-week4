@@ -10,7 +10,7 @@ Code Objectives:
 * The application works as expected.
 * Able to discuss the flow of the code and the concepts behind it with an instructor using correct terminology.
 
-http://keirstaple.github.io/javascript-week4/dist/index.html
+[Live GitHub-Pages Site](http://keirstaple.github.io/javascript-week4/dist/index.html)
 
 
 ## Prerequisites
